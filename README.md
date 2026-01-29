@@ -1,62 +1,127 @@
-# Retail-Customer-Churn-Analysis
-End-to-end data analysis project using MySQL and Power BI to identify customer attrition drivers
-**
-Project Overview**
-Customer churn is one of the biggest challenges in the retail industry. This project aims to analyze a retail dataset of 5,000+ customers to identify the pain points leading to attrition. By leveraging SQL for deep data mining and Power BI for interactive storytelling, I identified key drivers of churn and proposed data-driven retention strategies.
+# 📊 **Customer Churn Analysis in Retail (SQL & Power BI)**
 
-**Technical Stack**
-Database: MySQL Workbench (Data Cleaning, Transformation, and Advanced Querying)
+---
 
-Data Visualization: Power BI Desktop
+## **1. Project Overview**
+Customer churn is one of the biggest challenges in the retail industry.  
+This project analyzes a retail dataset of **5,000+ customers** to identify the key pain points leading to customer attrition.
 
-Data Connection: MySQL-to-Power BI (Direct Import)
+By leveraging **SQL for deep data mining** and **Power BI for interactive storytelling**, this project identifies major churn drivers and proposes **data-driven retention strategies**.
 
-Analytical Techniques: RFM Segmentation, KPI Tracking, Correlation Analysis
-**
-Repository Structure**
-SQL_Scripts/: Contains all .sql files used for data cleaning, profiling, and creating business views.
+---
 
-Dashboard/: The original .pbix Power BI file for interactive analysis.
+## **2. Technical Stack**
 
-dashboard_pdf/: A PDF export of the report for quick offline viewing.
+1. **Database:** MySQL Workbench  
+   - Data Cleaning  
+   - Data Transformation  
+   - Advanced Querying  
 
-dashboard_image/: High-resolution screenshots of the final dashboard.
+2. **Data Visualization:** Power BI Desktop  
 
-dashboard_video/: A screen recording demonstrating the interactive slicers and filters.
+3. **Data Connection:** MySQL → Power BI (Direct Import)
 
-dataset/: The raw data files and documentation of the dataset schema.
+4. **Analytical Techniques:**
+   1. RFM Segmentation  
+   2. KPI Tracking  
+   3. Correlation Analysis  
+
+---
+
+## **3. Repository Structure**
+
+├── SQL_Scripts/
+│ └── Contains  SQL file for data cleaning, profiling, and business views
+│
+├── Dashboard/
+│ └── Power BI (.pbix) file for interactive analysis
+│
+├── dashboard_pdf/
+│ └── PDF export of the dashboard for offline viewing
+│
+├── dashboard_image/
+│ └── High-resolution screenshots of the final dashboard
+│
+├── dashboard_video/
+│ └── Screen recording demonstrating interactive slicers and filters
+│
+└── dataset/
+└── contain dataset files 
 
 
-**Technical Workflow**
-Data Cleaning (SQL): Handled missing values in Tenure and WarehouseToHome columns and removed duplicates.
+---
 
-Feature Engineering (SQL): Created a v_portfolio_churn_final view with a custom Tenure_Group logic.
+## **4. Technical Workflow**
 
-Visualization (Power BI): Connected MySQL to Power BI via the MySQL Connector/NET to build a live-refresh dashboard.
+### **4.1 Data Cleaning (SQL)**
+1. Handled missing values in:
+   - `Tenure`
+   - `WarehouseToHome`
+2. Removed duplicate customer records
 
-Analysis: Performed Correlation Analysis between Complaints, Distance, and Churn Rate.
-**
-Key Business Insights**
-The Onboarding Gap: 45% of churn happens within the first 6 months.
+### **4.2 Feature Engineering (SQL)**
+1. Created a business-ready SQL view named:
+   - `v_portfolio_churn_final`
+2. Implemented custom **Tenure_Group** logic for customer segmentation
 
-Service Friction: Customers with unresolved complaints are 3.5x more likely to leave.
+### **4.3 Visualization (Power BI)**
+1. Connected MySQL to Power BI using **MySQL Connector/NET**
+2. Designed an interactive dashboard with KPIs, filters, and slicers
 
-Logistic Barriers: Churn rate spikes significantly for customers living >15km from the warehouse.
+### **4.4 Analysis**
+1. Performed **Correlation Analysis** between:
+   - Customer Complaints  
+   - Distance from Warehouse  
+   - Customer Churn Rate  
 
-Product Risk: The "Electronics" category shows the highest churn percentage compared to other categories.
+---
 
+## **5. Key Business Insights**
 
-**Strategic Recommendations**
-Retention Program: Launch a "90-Day Check-in" loyalty campaign for new users to reduce early-stage churn.
+1. **Onboarding Gap:**  
+   45% of customer churn occurs within the **first 6 months**
 
-Customer Support: Prioritize "At-Risk" customers who have filed a complaint by offering immediate resolution or discount vouchers.
+2. **Service Friction:**  
+   Customers with unresolved complaints are **3.5× more likely** to churn
 
-Shipping Optimization: Evaluate shipping costs and delivery times for high-distance zones to remain competitive.
+3. **Logistic Barriers:**  
+   Churn rate increases significantly for customers living **more than 15 km** from the warehouse
 
-**How to Run**
-Clone this repository.
+4. **Product Risk:**  
+   The **Electronics** category shows the highest churn percentage compared to other categories
 
-Run the scripts in the SQL_Scripts/ folder on your local MySQL server.
+---
 
-Open the .pbix file in Power BI Desktop to interact with the visual report.
+## **6. Strategic Recommendations**
 
+1. **Retention Program:**  
+   Launch a **“90-Day Check-in” loyalty campaign** to reduce early-stage churn
+
+2. **Customer Support Optimization:**  
+   Prioritize **at-risk customers** with complaints by offering:
+   1. Faster issue resolution  
+   2. Discount vouchers  
+
+3. **Shipping Optimization:**  
+   Re-evaluate delivery costs and timelines for **high-distance zones** to remain competitive
+
+---
+
+## **7. How to Run the Project**
+
+1. Clone this repository
+2. Execute SQL scripts from the `SQL_Scripts/` folder on your local MySQL server
+3. Open the `.pbix` file in **Power BI Desktop**
+4. Interact with the dashboard using filters and slicers
+
+---
+
+## **8. Tools & Technologies**
+
+1. MySQL  
+2. SQL  
+3. Power BI  
+4. Data Analytics  
+5. Business Intelligence  
+
+---
